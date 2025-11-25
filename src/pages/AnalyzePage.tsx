@@ -154,38 +154,58 @@ export function AnalyzePage() {
           </CardContent>
         </Card>
 
-        <Card className="border-slate-700/70">
-          <CardHeader>
-            <CardTitle className="text-xs uppercase tracking-[0.2em] text-muted">
-              Coming next
-            </CardTitle>
+        {/* Workspace highlights (replaces old "Coming next" block) */}
+        <Card className="glass-card border-slate-800/60 bg-slate-900/60">
+          <CardHeader className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <CardTitle className="text-slate-100">Workspace highlights</CardTitle>
+              <CardDescription className="text-slate-400">
+                What this workspace already does for you after loading a CSV.
+              </CardDescription>
+            </div>
+            <span className="inline-flex items-center gap-1 rounded-full border border-emerald-400/40 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              Live in this build
+            </span>
           </CardHeader>
-          <CardContent className="grid gap-3 text-xs text-muted sm:grid-cols-3">
-            <div className="space-y-1">
-              <p className="text-[11px] font-semibold text-accent-mint">
-                Narrative insights
-              </p>
-              <p>
-                Generate a short, template-based analyst narrative for each
-                query result, no LLM required.
-              </p>
-            </div>
-            <div className="space-y-1">
-              <p className="text-[11px] font-semibold text-accent-cyan">
-                Dashboard cards
-              </p>
-              <p>
-                Save any query + chart + narrative as a reusable dashboard card
-                in the Dashboard tab.
+
+          <CardContent className="grid gap-4 border-t border-slate-800/60 pt-4 text-sm text-slate-300 md:grid-cols-3">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+                Smart questions &amp; guided SQL
+              </div>
+              <p className="text-slate-400">
+                The app inspects your schema and suggests ready-to-run questions.
+                Each one expands into a parameterized SQL template that targets a
+                local DuckDB table named{" "}
+                <code className="font-mono text-xs text-sky-300">data</code>.
               </p>
             </div>
-            <div className="space-y-1">
-              <p className="text-[11px] font-semibold text-accent-violet">
-                Custom SQL editor
+
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                Local DuckDB engine + charts
+              </div>
+              <p className="text-slate-400">
+                Queries run fully in your browser via DuckDB-wasm. Results flow
+                into a compact grid and an auto-selected Chart.js view
+                (bar/line/pie), with the option to tweak chart type based on the
+                result shape.
               </p>
-              <p>
-                Add a code-style SQL editor with syntax highlighting and saved
-                queries.
+            </div>
+
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                Narratives, export, and dashboard
+              </div>
+              <p className="text-slate-400">
+                Each chart gets a short, template-based narrative plus tools to
+                download CSV, copy Markdown, and save the insight as a reusable
+                dashboard card in the{" "}
+                <span className="font-medium text-slate-200">Dashboard</span> tab.
               </p>
             </div>
           </CardContent>
@@ -267,8 +287,8 @@ export function AnalyzePage() {
               </li>
             </ol>
             <p>
-              Under the hood, each question is a SQL template targeting a
-              DuckDB table named{" "}
+              Under the hood, each question is a SQL template targeting a DuckDB
+              table named{" "}
               <span className="font-mono text-[11px] text-accent-cyan">
                 data
               </span>
