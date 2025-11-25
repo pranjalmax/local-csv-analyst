@@ -18,9 +18,6 @@ export function NavBar() {
             <span className="text-xs font-semibold tracking-wide uppercase text-accent-cyan">
               Local CSV Analyst
             </span>
-            <span className="text-[10px] text-muted">
-              Offline CSV insights with AI vibes
-            </span>
           </div>
         </motion.div>
 
@@ -36,7 +33,7 @@ export function NavBar() {
           </span>
           <span className="inline-flex items-center gap-1 rounded-full border border-slate-700/60 bg-slate-900/70 px-2 py-1">
             <LineChart className="h-3.5 w-3.5 text-accent-violet" />
-            <span>DuckDB-wasm & charts coming next</span>
+            <span>DuckDB-wasm and charts</span>
           </span>
         </motion.div>
       </div>

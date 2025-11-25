@@ -59,7 +59,7 @@ function App() {
         </main>
 
         <footer className="border-t border-slate-800/70 bg-slate-950/40 py-3 text-center text-[11px] text-muted backdrop-blur">
-          Runs fully in your browser • Data stays local • Step 1: UI shell only
+          Runs fully in your browser • Data stays local • Powered by DuckDB-wasm
         </footer>
       </div>
 
