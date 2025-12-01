@@ -18,6 +18,8 @@ Hosted on GitHub Pages:
 
 **https://pranjalmax.github.io/local-csv-analyst/**
 
+![Local CSV Analyst Demo](./local_csv_gif.gif)
+
 > All CSV data stays in your browser. Reloading the page clears the active dataset but keeps your saved dashboard cards (in localStorage).
 
 ---
